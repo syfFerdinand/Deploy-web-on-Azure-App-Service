@@ -5,6 +5,8 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'secret-key'
 
+    AZURE_STORAGE_CONNECTION_STRING = os.environ.get('AZURE_STORAGE_CONNECTION_STRING') or 'DefaultEndpointsProtocol=https;AccountName=xxxx;AccountKey=xxxx;EndpointSuffix=core.windows.net'
+
     BLOB_ACCOUNT = os.environ.get('BLOB_ACCOUNT') or 'ENTER_STORAGE_ACCOUNT_NAME'
     BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or 'ENTER_BLOB_STORAGE_KEY'
     BLOB_CONTAINER = os.environ.get('BLOB_CONTAINER') or 'ENTER_IMAGES_CONTAINER_NAME'
@@ -42,5 +44,5 @@ class Config(object):
     SCOPE = ["User.Read"] # Only need to read user profile for this app
 
     SESSION_TYPE = "filesystem"  # Token cache will be stored in server-side session
-    print("Os config: SQL PASSWORD ")
-    print(os.environ.get('SQL_PASSWORD') or "none")
+    print("Os config: AZURE_STORAGE_CONNECTION_STRING : ")
+    print(os.environ.get('AZURE_STORAGE_CONNECTION_STRING') or "none")
