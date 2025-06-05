@@ -1,0 +1,15 @@
+# .dockerignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.git/
+.gitignore
+Dockerfile
+.dockerignore
+*.db
+*.sqlite3
+# Autres fichiers ou dossiers à ignorer
